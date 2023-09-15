@@ -6,7 +6,7 @@ import HeroBanner from '../components/HeroBanner';
 
 const Home = () => {
   const [bodyPart, setbodyPart] = useState("all"); 
-  const [excecises, setExcercises] = useState([]);
+  const [excercises, setExcercises] = useState([]);
   
 // useState() is a function in React (a JavaScript library for building user interfaces) that helps you manage 
 //and store pieces of data, often called "state," that can change over time.
@@ -15,8 +15,8 @@ const Home = () => {
   return (
 <Box>
     <HeroBanner/>
-    <SearchExcercises/>
-    <Excercises/>
+    <SearchExcercises excercises= {excercises} setExcercises={setExcercises} bodyPart={bodyPart} setBodyPart={setbodyPart}/> 
+    <Excercises excercises={excercises} setExcercises={setExcercises} bodyPart={bodyPart} setBodyPart={setbodyPart}/>
 
 </Box>
   )
