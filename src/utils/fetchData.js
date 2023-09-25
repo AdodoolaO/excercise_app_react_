@@ -6,6 +6,7 @@ export const excerciseOptions = {
     }
   };
 
+  //fetchData function
 export const fetchData = async (url, options) => {
 const response = await fetch(url, options)
 const data = await response.json(); //turn data into json format 

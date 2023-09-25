@@ -16,8 +16,20 @@ const Home = () => {
   return (
 <Box>
     <HeroBanner/>
-    <SearchExcercises excercises= {excercises} setExcercises={setExcercises} bodyPart={bodyPart} setBodyPart={setbodyPart}/> 
-    <Excercises excercises={excercises} setExcercises={setExcercises} bodyPart={bodyPart} setBodyPart={setbodyPart}/>
+    <SearchExcercises 
+    excercises= {excercises} 
+    setExcercises={setExcercises} 
+    bodyPart={bodyPart} 
+    setBodyPart={setbodyPart}
+    /> 
+    <Excercises 
+    excercises={excercises} 
+    setExcercises={setExcercises} 
+    bodyPart={bodyPart} 
+    //setBodyPart={setbodyPart}
+    
+    />
+
 
 </Box>
   )

@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {Box, Typography} from '@mui/material';
+
 import BodyPart from './BodyPart';
 import { ScrollMenu,VisibilityContext } from 'react-horizontal-scrolling-menu';
 import RightArrowIcon from '../assets/icons/right-arrow.png';
@@ -10,7 +11,7 @@ const LeftArrow = () => {
 
   return (
     <Typography onClick={() => scrollPrev()} className="right-arrow">
-      <img src={LeftArrowIcon} alt="right-arrow" />
+      <img src={LeftArrowIcon} alt="left-arrow" />
     </Typography>
   );
 };
@@ -25,18 +26,18 @@ const RightArrow = () => {
   );
 };
 
-const HorizontalScrollBar = ({data, bodyParts, setBodyPart}) => { //accepts the data property from searchexcervises.js
+const HorizontalScrollBar = ({data, bodyPart, setBodyPart}) => { //accepts the data property from searchexcervises.js
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
-{data.map((item)=> ( //looping data
-  <Box
-key ={item.id || item}
-itemID ={item.id || item}
-title ={item.id || item}
-m= "0 40px"
+      {data.map((item)=> ( //looping data
+        <Box
+          key ={item.id || item}
+          itemID ={item.id || item}
+          title ={item.id || item}
+          m= "0 40px"
 > 
-<BodyPart item={item} BodyPart={BodyPart} setBodyPart={setBodyPart}/>
-  </Box>)
+          <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
+        </Box>)
 )}
     </ScrollMenu>
   )

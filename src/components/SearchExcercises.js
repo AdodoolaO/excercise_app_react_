@@ -28,7 +28,7 @@ const handleSearch = async ()=> { //async because we have to fetch some data fro
     const excercisesData = await fetchData("https://exercisedb.p.rapidapi.com/exercises",
  excerciseOptions)
 
-console.log(excercisesData);
+//console.log(excercisesData);
 
 const searchedExcercises = excercisesData.filter((excercise)=>
 excercise.name.toLowerCase().includes(search )
